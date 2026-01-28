@@ -1,117 +1,16 @@
-# Featching_Api
-Perfect 👍 **Fetching users from an API** is *the* best beginner React project.
-I’ll keep this **super simple**, slow, and beginner-friendly.
+# React + Vite
 
----
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎯 What we’ll build (Beginner Project)
+Currently, two official plugins are available:
 
-👉 A page that:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-* Fetches users from an API
-* Shows **Name, Email**
-* Uses **useEffect + useState**
-* No fancy CSS
+## React Compiler
 
-API we’ll use (free & easy):
-👉 `https://jsonplaceholder.typicode.com/users`
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## 🧠 Concepts you’ll learn
-
-* `useState` → store users
-* `useEffect` → call API
-* `fetch()` → get data
-* `map()` → show list
-
----
-
-## 🧠 Understand Slowly (Important)
-
-### 1️⃣ State
-
-```js
-const [users, setUsers] = useState([]);
-```
-
-👉 Stores users from API
-
----
-
-### 2️⃣ useEffect
-
-```js
-useEffect(() => { ... }, []);
-```
-
-👉 Runs **once** when page loads
-
----
-
-### 3️⃣ fetch
-
-```js
-fetch(URL)
-  .then(res => res.json())
-  .then(data => setUsers(data));
-```
-
-👉 Get → convert → store
-
----
-
-### 4️⃣ map
-
-```js
-users.map(user => ...)
-```
-
-👉 Loop over users array
-
----
-
-## 🔌 Step 3: Use Component in `App.jsx`
-
-```jsx
-import Users from "./Nodes/Users";
-
-function App() {
-  return (
-    <div>
-      <h1>Fetch Users API</h1>
-      <Users />
-    </div>
-  );
-}
-
-export default App;
-```
-
----
-
-## ✅ Output You’ll See
-
-```
-Fetch Users API
-
-Users List
-Name: Leanne Graham
-Email: Sincere@april.biz
-----------------------
-...
-```
-
----
-
-
-
-## 🚨 Common Beginner Mistakes (Avoid these)
-
-❌ Forget `[]` in useEffect → infinite loop
-❌ Forget `key` in map
-❌ Try to `map` before data arrives
-
----
-
-You’re doing great 💪 Keep going!
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
