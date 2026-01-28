@@ -27,6 +27,84 @@ API we’ll use (free & easy):
 
 ---
 
+## 🧠 Understand Slowly (Important)
+
+### 1️⃣ State
+
+```js
+const [users, setUsers] = useState([]);
+```
+
+👉 Stores users from API
+
+---
+
+### 2️⃣ useEffect
+
+```js
+useEffect(() => { ... }, []);
+```
+
+👉 Runs **once** when page loads
+
+---
+
+### 3️⃣ fetch
+
+```js
+fetch(URL)
+  .then(res => res.json())
+  .then(data => setUsers(data));
+```
+
+👉 Get → convert → store
+
+---
+
+### 4️⃣ map
+
+```js
+users.map(user => ...)
+```
+
+👉 Loop over users array
+
+---
+
+## 🔌 Step 3: Use Component in `App.jsx`
+
+```jsx
+import Users from "./Nodes/Users";
+
+function App() {
+  return (
+    <div>
+      <h1>Fetch Users API</h1>
+      <Users />
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+## ✅ Output You’ll See
+
+```
+Fetch Users API
+
+Users List
+Name: Leanne Graham
+Email: Sincere@april.biz
+----------------------
+...
+```
+
+---
+
+
 
 ## 🚨 Common Beginner Mistakes (Avoid these)
 
